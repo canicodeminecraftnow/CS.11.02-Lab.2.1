@@ -1,31 +1,60 @@
-/**
-*****************************************************************************************************
-* By writing your name in the space provided below, you are honouring the CIS academic honesty pledge 
-* “I have neither given nor received unauthorized aid on this piece of work.”
-* NAME: 
-*****************************************************************************************************
-*/
+import static org.junit.jupiter.api.Assertions.*;
 
-public class Main {
+class MainTest {
 
-    public static void main(String[] args) {
-
+    @org.junit.jupiter.api.Test
+    void main() {
     }
 
-    // 1. add
-    
-    // 2. add
+    @org.junit.jupiter.api.Test
+    void add() {
+        assertEquals(12, Main.add(5,7));
+    }
 
-    // 3. morningGreeting
+    @org.junit.jupiter.api.Test
+    void addTwo() {
+        assertEquals(24, Main.add(5,7,6,6));
+    }
 
-    // 4. afternoonGreeting
+    @org.junit.jupiter.api.Test
+    void morningGreeting() {
+        assertEquals("早上好, Toby Fox!", Main.morningGreeting("Toby Fox"));
+    }
 
-    // 5. triple
+    @org.junit.jupiter.api.Test
+    void afternoonGreeting() {
+        assertEquals("下午好, Mac Miller!", Main.afternoonGreeting("Mac Miller"));
+    }
 
-    // 6. half
+    @org.junit.jupiter.api.Test
+    void triple() {
+        assertEquals("oohbabyoohbabyoohbaby", Main.triple("oohbaby"));
+    }
 
-    // 7. roundPositiveValueToNearestInteger
+    @org.junit.jupiter.api.Test
+    void half() {
+        assertEquals(9.5, Main.half(19));
+    }
 
-    // 8. roundNegativeValueToNearestInteger
+    @org.junit.jupiter.api.Test
+    void roundPositiveValueToNearestInteger() {
+        assertEquals(9, Main.roundPositiveValueToNearestInteger(8.5));
+    }
+
+    @org.junit.jupiter.api.Test
+    void roundPositiveValueToNearestIntegerTwo() {
+        assertEquals(8, Main.roundPositiveValueToNearestInteger(8.49));
+    }
+
+    @org.junit.jupiter.api.Test
+    void roundNegativeValueToNearestInteger() {
+        assertEquals(-8, Main.roundNegativeValueToNearestInteger(-8.49));
+    }
+
+    @org.junit.jupiter.api.Test
+    void roundNegativeValueToNearestIntegerTwo() {
+        assertEquals(-9, Main.roundNegativeValueToNearestInteger(-8.5));
+    }
+
 
 }
